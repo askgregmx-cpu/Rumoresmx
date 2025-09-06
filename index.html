@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notas en el Mapa</title>
+  <title>Mapa de Notas</title>
 
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-sA+4YH3GI+KkF6kdKJeZf5oY4NLF4Nf4gFf3e5sU5wo="
+    crossorigin=""
+  />
 
-  <!-- Supabase JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #map { width: 100%; height: 100%; }
+  </style>
 </head>
 <body>
-  <h1>Notas en el Mapa</h1>
-
   <div id="map"></div>
 
-  <div id="note-form">
-    <input type="text" id="note-input" placeholder="Escribe tu nota...">
-    <button onclick="addNote()">Agregar Nota</button>
-  </div>
-
-  <ul id="notes-list"></ul>
-
   <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-n8bVkgVxP4Fw8ZvZ8uGStR1bJUNxP4LpU+jQngbV+gE="
+    crossorigin=""
+  ></script>
+
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+
+  <!-- Nuestro Script -->
   <script src="script.js"></script>
 </body>
 </html>
