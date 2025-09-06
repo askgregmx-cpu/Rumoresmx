@@ -86,7 +86,7 @@ function addNote(note) {
 }
 
 // ----------------------------
-// Agregar nueva nota (sin obligar mensaje ni categoría)
+// Agregar nueva nota automáticamente
 // ----------------------------
 let currentMarker = null;
 map.on('click', function(e) {
@@ -96,7 +96,7 @@ map.on('click', function(e) {
 
 document.getElementById('save-note').onclick = async function() {
   let text = document.getElementById('note-text').value.trim();
-  if (!text) text = "Nota anónima 🏠"; // valor por defecto
+  if (!text) text = "Nota anónima 🏠";
 
   const { data, error } = await supabase.from('notes').insert([
     { lat: currentMarker.lat, lng: currentMarker.lng, text }
