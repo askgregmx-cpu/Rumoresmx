@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>RumoresMX</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <h1>RumoresMX</h1>
+  <div id="map"></div>
+
+  <!-- Popup para agregar nota (opcional) -->
+  <div id="note-popup" class="hidden">
+    <textarea id="note-text" placeholder="Deja tu nota..."></textarea>
+    <button id="save-note">Guardar nota</button>
+    <button id="cancel-note">Cancelar</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
