@@ -3,21 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RumorMX Clone</title>
+  <title>Notas en el Mapa</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/supabase.min.js"></script>
+
+  <!-- Supabase JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
-  <h1>RumorMX Clone</h1>
+  <h1>Notas en el Mapa</h1>
+
   <div id="map"></div>
 
-  <div id="form-note">
-    <input type="text" id="note-text" placeholder="Escribe tu nota...">
-    <button id="btn-add">Agregar Nota</button>
+  <div id="note-form">
+    <input type="text" id="note-input" placeholder="Escribe tu nota...">
+    <button onclick="addNote()">Agregar Nota</button>
   </div>
 
   <ul id="notes-list"></ul>
 
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
