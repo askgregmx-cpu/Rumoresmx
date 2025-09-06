@@ -1,26 +1,33 @@
-/* Ajuste general de la página */
+/* General */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    background: #f2f2f7;
 }
 
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* altura total de la ventana */
+    height: 100vh;
 }
 
 h1 {
     text-align: center;
     margin: 1rem 0;
-    flex: 0 0 auto; /* no se estire */
+    font-weight: 600;
+    color: #111;
+    font-size: 1.8rem;
 }
 
 #map {
-    flex: 1 1 auto; /* ocupa el resto del espacio */
+    flex: 1 1 auto;
     width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
 }
 
 /* Popup para agregar nota */
@@ -29,26 +36,25 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    max-width: 400px;
     width: 90%;
     text-align: center;
     z-index: 1000;
+    font-size: 1rem;
 }
 
-.hidden {
-    display: none;
-}
+.hidden { display: none; }
 
 textarea {
     width: 100%;
-    height: 100px;
+    height: 80px;
     padding: 0.5rem;
     margin-bottom: 1rem;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 1px solid #ccc;
     resize: none;
     font-size: 1rem;
@@ -56,10 +62,10 @@ textarea {
 
 button {
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
+    margin: 0 0.3rem;
     border: none;
-    border-radius: 10px;
-    background-color: #4CAF50;
+    border-radius: 15px;
+    background-color: #007AFF;
     color: white;
     font-size: 1rem;
     cursor: pointer;
@@ -67,55 +73,19 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #005BBB;
 }
 
-/* Estilo de notas */
+/* Estilo de notas en el mapa */
 .note-label-divicon .note-label {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.95);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     text-align: center;
-    font-weight: bold;
-    max-width: 500px;
-    width: auto;
-    display: inline-block;
-    white-space: normal;
-    word-wrap: break-word;
+    font-weight: 500;
     font-size: 1rem;
-}
-
-/* Popup de comentarios */
-.comment-popup textarea {
-    width: 100%;
-    height: 60px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    resize: none;
-}
-
-.comment-popup button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    margin-bottom: 5px;
-}
-
-.comment-popup button:hover {
-    background-color: #45a049;
-}
-
-.comment-popup .comment-list p {
-    background: rgba(200,200,200,0.2);
-    padding: 0.3rem 0.5rem;
-    border-radius: 5px;
-    margin: 2px 0;
-    font-size: 0.9rem;
+    max-width: 300px;
+    word-wrap: break-word;
+    display: inline-block;
 }
